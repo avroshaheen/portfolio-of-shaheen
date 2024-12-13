@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Shaheen's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ea53ad56d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./resources/css/app.css" />
+    <link rel="stylesheet" href="./resources/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="./resources/css/dark_mode.css"
+      id="dark-mode-stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./resources/css/light_mode.css"
+      id="light-mode-stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="resources/images/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-header">
+          <div class="nav-left">
+            <div class="logo" title="Go To Home">
+              <a href="#"
+                ><img src="./resources/images/logo.png" alt="Logo"
+              /></a>
+            </div>
+          </div>
+          <div class="color-switcher">
+            <label class="switch">
+              <input type="checkbox" id="mode-toggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="nav-toggler" title="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="navbar-content">
+          <div class="nav-center">
+            <li><a href="#home" class="text-neutral fw-700">HOME</a></li>
+            <li><a href="#works" class="text-neutral fw-700">WORKS</a></li>
+            <li><a href="#contact" class="text-neutral fw-700">CONTACT</a></li>
+            <li>
+              <a
+                target="_blank"
+                href="https://devonrun.com/category/programming/"
+                class="text-neutral fw-700"
+                >BLOG</a
+              >
+            </li>
+          </div>
+          <div class="nav-right">
+            <li>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/12O2K61-BhlVgVg7Alm3f98ONE4zXdYLZ/view?usp=sharing"
+                class="button cv-button text-neutral fw-700"
+                title="Download CV"
+                >CV <i class="fa-solid fa-download"></i
+              ></a>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Hero Section                               -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="hero">
+      <div class="row">
+        <div class="hero-image">
+          <img
+            src="./resources/images/av-shaheen.png"
+            alt="av shaheen"
+            class="av-shaheen"
+          />
+          <div class="social-links-list">
+            <a
+              href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
+              class="social-icon"
+              ><i class="fa-brands fa-linkedin"></i></a
+            ><a href="mailto:avrostu@gmail.com" class="social-icon"
+              ><i class="fa-regular fa-envelope"></i></a
+            ><a
+              href="https://github.com/avrojp?tab=repositories"
+              class="social-icon"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="hero-content">
+          <h1>Welcome to My Portfolio</h1>
+          <p>
+            I am a passionate web designer with skills in HTML, CSS, Bootstrap,
+            JavaScript, and more. Explore my work and let's create something
+            amazing together
+          </p>
+          <button
+            onclick="window.location.href='#works'"
+            class="button btn-primary"
+          >
+            See My Works
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                  WORKS                                  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="works">
+      <div class="row">
+        <h2>WORKS</h2>
+        <p class="text-neutral">
+          Some of my works below. For more projects please visit my
+          <a href="https://avrojp.github.io/dev-shaheen-portfolio/"
+            >Github Account</a
+          >
+        </p>
+      </div>
+      <div class="row">
+        <div class="project-container">
+          <fieldset class="project-card">
+            <legend class="project-title">Blinqpay Langing Page</legend>
+            <div class="project-screenshot">
+              <img src="./resources/images/blinqpay.png" alt="Blinqpay" />
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/avrojp/bank-landing-page" class="code"
+                >Source Code</a
+              ><a
+                href="https://avrojp.github.io/bank-landing-page/"
+                class="live"
+                >Live Project</a
+              >
+            </div>
+          </fieldset>
+          <fieldset class="project-card">
+            <legend class="project-title">CSS Grid Challenge</legend>
+            <div class="project-screenshot">
+              <img src="./resources/images/css grid.png" alt="CSS Grid" />
+            </div>
+            <div class="project-links">
+              <a
+                href="https://avrojp.github.io/frontendmentor-css-grid-challenge/"
+                class="code"
+                >Source Code</a
+              ><a
+                href="https://github.com/avrojp/%20frontendmentor-css-grid-challenge/"
+                class="live"
+                >Live Project</a
+              >
+            </div>
+          </fieldset>
+          <fieldset class="project-card">
+            <legend class="project-title">QR Code Component</legend>
+            <div class="project-screenshot">
+              <img
+                src="./resources/images/QR code component.png"
+                alt="QRCode"
+              />
+            </div>
+            <div class="project-links">
+              <a href="https://avrojp.github.io/qr-code-component/" class="code"
+                >Source Code</a
+              ><a
+                href="https://github.com/avrojp/qr-code-component/"
+                class="live"
+                >Live Project</a
+              >
+            </div>
+          </fieldset>
+          <fieldset class="project-card">
+            <legend class="project-title">PingPong Score Keeper</legend>
+            <div class="project-screenshot">
+              <img
+                src="./resources/images/Ping Pong Score Keeper.png"
+                alt="Pingpong"
+              />
+            </div>
+            <div class="project-links">
+              <a href="https://avrojp.github.io/pingpongscore/" class="code"
+                >Source Code</a
+              ><a href="https://avrojp.github.io/pingpongscore/" class="live"
+                >Live Project</a
+              >
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             Contact Section                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="contact">
+      <div class="row">
+        <h2>Contact Details</h2>
+        <p>Contact details and hiring information</p>
+      </div>
+      <div class="row contact-details">
+        <div class="contact-primary text-pinkish fw-600 fs-350">
+          <div class="row">─Phone: 01611-220007</div>
+          <div class="row">─Email: avrostu@gmail.com</div>
+          <div class="row">
+            ─Github: https://github.com/avrojp?tab=repositories
+          </div>
+          <div class="row">
+            ─LinkedIn: https://www.linkedin.com/in/shahinur-rahman-593658198/
+          </div>
+        </div>
+        <fieldset class="contact-secondary">
+          <form action="mailto:avrostu@gmail.com" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="..."/>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="..."/>
+            <label for="message">Message</label>
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Enter your message here"
+            />
+            <input type="submit" value="Send Mail" class="send-mail" />
+          </form>
+        </fieldset>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 FOOTER                                  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="footer">
+      <div class="row">
+        <h4 class="fw-700">© 2024 AV Shaheen</h4>
+      </div>
+      <div class="row">
+        <h3>Connect with me:</h3>
+        <p class="fw-700 fs-400">
+          <a href="https://github.com/avrojp?tab=repositories">GitHub</a> |
+          <a href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
+            >LinkedIn</a
+          >
+          |
+          <a href="https://www.frontendmentor.io/profile/avrojp"
+            >Frontend Mentor</a
+          >
+          |
+          <a href="https://devonrun.com">DevOnRun</a>
+        </p>
+      </div>
+    </section>
+    <!-- Script Files -->
+    <script src="./resources/js/app.js"></script>
+  </body>
+</html>

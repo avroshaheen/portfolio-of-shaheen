@@ -1,0 +1,607 @@
+:root {
+  --clr-neutral: #f1faee;
+  --clr-greyish: #457b9d;
+  --clr-pinkish: #a8dadc;
+  --clr-blueish: #1d3557;
+  --clr-redish: #e63946;
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fs-300: 1rem;
+  --fs-400: 1.2rem;
+  --fs-450: 1.4rem;
+  --fs-500: 2.2rem;
+  --fs-600: 3rem;
+  --flow-spacer: 1em;
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-headings: "Titillium Web", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-headings);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-block-size: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-inline-size: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Basics                               */
+/* -------------------------------------------------------------------------- */
+html {
+  font-size: 90%;
+}
+
+body {
+  font-size: 1em;
+  background-color: #fff;
+  font-weight: var(--fw-400);
+  font-size: var(--fs-300);
+  line-height: 1.3;
+  font-family: var(--ff-primary);
+}
+
+/* --------------------------- Reusable Components -------------------------- */
+.row {
+  inline-size: 100%;
+  max-inline-size: 1600px;
+  margin-inline: auto;
+}
+
+.button {
+  border: 0;
+  padding: 0.3em 1.5em;
+  cursor: pointer;
+}
+
+.text-neutral {
+  color: var(--clr-neutral);
+}
+
+.op-50 {
+  opacity: 0.5;
+}
+
+.op-90 {
+  opacity: 0.8;
+}
+
+.text-blueish {
+  color: var(--clr-blueish);
+}
+
+.text-redish {
+  color: var(--clr-redish);
+}
+
+.text-pinkish {
+  color: var(--clr-pinkish);
+}
+
+.text-greyish {
+  color: var(--clr-greyish);
+}
+
+.fw-400 {
+  font-weight: var(--fw-400);
+}
+
+.fw-700 {
+  font-weight: var(--fw-700);
+}
+
+.fw-800 {
+  font-weight: var(--fw-800);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-450 {
+  font-size: var(--fs-450);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+section {
+  padding: 2rem;
+  margin-inline: auto;
+}
+
+/*  */
+.border {
+  border: 2px solid rgb(255, 0, 0);
+}
+
+/* HEADER SECTION */
+header {
+  background-color: var(--clr-blueish);
+  padding: 0.5em;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--clr-greyish);
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-content {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4em;
+  gap: 3em;
+}
+
+.navbar-content.show {
+  display: flex;
+}
+
+.navbar-content > div {
+  width: 100%;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.logo {
+  max-width: 65%;
+}
+
+.nav-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.nav-center li {
+  width: 100%;
+  border-bottom: 1px solid #a3a3d1c5;
+  display: block;
+}
+
+.nav-center li a {
+  padding: 0.4em 1em;
+  display: block;
+  text-align: center;
+}
+
+.nav-center li a:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--clr-neutral);
+  background-color: var(--clr-redish);
+  /* color: var(--clr-blueish); */
+}
+
+.nav-right {
+  list-style-type: none;
+  width: 100%;
+  display: block;
+}
+
+.cv-button {
+  background-color: #1d3557;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.6em 1.5em;
+  border: 1px solid var(--clr-greyish);
+}
+
+.cv-button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--clr-redish);
+}
+
+.nav-toggler {
+  color: var(--clr-neutral);
+  border: 1px solid rgba(255, 0, 0, 0.144);
+  padding: 4px 8px;
+}
+
+.nav-toggler:hover {
+  color: #e63946;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                HERO_SECTION                                */
+/* -------------------------------------------------------------------------- */
+section#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  background-color: var(--clr-blueish);
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+h1 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral);
+  line-height: 1.3;
+  text-align: center;
+}
+
+h1 + p {
+  font-size: var(--fs-450);
+  font-weight: var(--fw-500);
+  color: var(--clr-);
+  width: 90%;
+  margin-top: 0.5em;
+  color: var(--clr-pinkish);
+  text-align: center;
+  line-height: 1.2;
+  background-image: url(../images/graph.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.btn-primary {
+  font-size: var(--fs-450);
+
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral);
+  background-color: var(--clr-greyish);
+  text-align: center;
+  width: 100%;
+  margin-top: 2em;
+  padding: 0.5em 2em;
+  border-radius: 4px;
+  font-family: "Titillium Web";
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-redish);
+ text-decoration: underline;
+}
+
+.hero-image img {
+  border-radius: 10%;
+  box-shadow: 15px 20px 20px rgba(25, 25, 112, 0.514);
+}
+
+.social-links-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  position: relative;
+  bottom: 1.6rem;
+  margin-left: -4em;
+}
+
+.social-icon {
+  background-color: #141414a1;
+  font-size: 1.5em;
+  padding: 8px 10px;
+  color: var(--clr-neutral);
+  border-radius: 10%;
+}
+
+.social-icon:hover {
+  color: var(--clr-redish);
+  transition: all 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    WORKS                                   */
+/* -------------------------------------------------------------------------- */
+#works {
+  background-color: var(--clr-greyish);
+}
+
+h2 {
+  text-align: center;
+  font-size: var(--fs-500);
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral);
+}
+
+h2 + p {
+  text-align: center;
+  color: var(--clr-pinkish);
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
+}
+
+.project-screenshot img {
+  border-radius: 4px;
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+}
+
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.project-title {
+  font-weight: bold;
+  color: var(--clr-neutral);
+  font-size: var(--fs-450);
+  margin-bottom: 0.3em;
+}
+
+.project-links {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+  display: flex;
+  gap: 1em;
+}
+
+.project-links a {
+  font-family: monospace;
+  color: #f1faee;
+  padding: 3px 6px;
+  border: 1px solid var(--clr-pinkish);
+  background-color: var(--clr-blueish);
+  border-radius: 4px;
+}
+
+.project-links a:hover {
+  background-color: var(--clr-redish);
+  transition: all 0.4s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Contact Section                              */
+/* -------------------------------------------------------------------------- */
+#contact {
+  background-color: var(--clr-blueish);
+  font-weight: bold;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-top: 3em;
+}
+
+.contact-primary {
+  color: var(--clr-neutral);
+  border-left: 2px solid var(--clr-pinkish);
+}
+
+.contact-details div {
+  margin-bottom: 0.5em;
+}
+
+.contact-secondary form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: var(--clr-neutral);
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  color: var(--clr-neutral);
+  margin-bottom: 1em;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  background-color: var(--clr-blueish);
+  outline: none;
+  border: 1px solid var(--clr-pinkish);
+  color: var(--clr-neutral);
+}
+
+::placeholder {
+  color: var(--clr-greyish);
+}
+
+#message {
+  padding: 2em;
+}
+
+.send-mail {
+  cursor: pointer;
+  width: 100px;
+}
+
+.send-mail:hover {
+  background-color: var(--clr-redish);
+  transition: 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+#footer {
+  background-color: var(--clr-greyish);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  gap: 3em;
+}
+/* ----------------------------- Color Switcher ----------------------------- */
+.color-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* The switch - the box around the slider */
+.switch {
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: #28096b;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #fff000;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+input:checked + .slider {
+  background-color: #522ba7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #fff000;
+}
