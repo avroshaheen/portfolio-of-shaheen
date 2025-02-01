@@ -19,6 +19,7 @@ header {
   );
   border: 1px solid rgb(82, 147, 201);
 }
+
 section#hero {
   background: rgb(63, 94, 251);
   background: radial-gradient(
@@ -27,6 +28,7 @@ section#hero {
     rgba(252, 70, 107, 1) 100%
   );
 }
+
 #works {
   background: rgb(131, 58, 180);
   background: linear-gradient(
@@ -36,9 +38,11 @@ section#hero {
     rgba(237, 69, 252, 0.932) 100%
   );
 }
+
 #contact {
   background: linear-gradient(to left, #c33764, #1d2671);
 }
+
 #footer {
   background-image: linear-gradient(
     to top,
@@ -47,17 +51,18 @@ section#hero {
     #2a5298 100%
   );
   border-top: 1px solid #ffffff41;
+
   p > a:link {
     color: rgb(37, 146, 241);
   }
-  h4 {
-    color: rgb(255, 255, 255);
-    font-weight: 800;
-    font-size: 30px;
-    background-image: url("../images/av-shaheen.png");
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: cover;
-  }
+}
+h4 {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 30px;
+  background-image: url("../images/av-shaheen.png");
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
 }

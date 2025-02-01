@@ -4,6 +4,7 @@
   --clr-pinkish: #a8dadc;
   --clr-blueish: #1d3557;
   --clr-redish: #e63946;
+  --clr-customWhite: #ffffffe2;
   --fw-400: 400;
   --fw-700: 700;
   --fw-800: 800;
@@ -117,6 +118,7 @@ a {
 /* -------------------------------------------------------------------------- */
 html {
   font-size: 90%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -144,7 +146,9 @@ body {
 .text-neutral {
   color: var(--clr-neutral);
 }
-
+.text-customWhite {
+  color: var(--clr-customWhite);
+}
 .op-50 {
   opacity: 0.5;
 }
@@ -368,7 +372,7 @@ h1 + p {
 
 .btn-primary:hover {
   background-color: var(--clr-redish);
- text-decoration: underline;
+  text-decoration: underline;
 }
 
 .hero-image img {

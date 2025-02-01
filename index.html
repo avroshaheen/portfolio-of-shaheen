@@ -14,6 +14,8 @@
       src="https://kit.fontawesome.com/ea53ad56d9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <link rel="stylesheet" href="./resources/css/app.css" />
     <link rel="stylesheet" href="./resources/css/responsive.css" />
     <link
@@ -57,7 +59,7 @@
         </div>
         <div class="navbar-content">
           <div class="nav-center">
-            <li><a href="#home" class="text-neutral fw-700">HOME</a></li>
+            <li><a href="#" class="text-neutral fw-700">HOME</a></li>
             <li><a href="#works" class="text-neutral fw-700">WORKS</a></li>
             <li><a href="#contact" class="text-neutral fw-700">CONTACT</a></li>
             <li>
@@ -65,8 +67,8 @@
                 target="_blank"
                 href="https://devonrun.com/"
                 class="text-neutral fw-700"
-                >BLOG</a
-              >
+                ><span>BLOG</span>
+              </a>
             </li>
           </div>
           <div class="nav-right">
@@ -90,18 +92,23 @@
       <div class="row">
         <div class="hero-image">
           <img
-            src="./resources/images/av-shaheen.jpg"
+            src="./resources/images/person-image.png"
             alt="av shaheen"
             class="av-shaheen"
           />
           <div class="social-links-list">
             <a
+              target="_blank"
               href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
               class="social-icon"
               ><i class="fa-brands fa-linkedin"></i></a
-            ><a href="mailto:avrostu@gmail.com" class="social-icon"
+            ><a
+              target="_blank"
+              href="mailto:avrostu@gmail.com"
+              class="social-icon"
               ><i class="fa-regular fa-envelope"></i></a
             ><a
+              target="_blank"
               href="https://github.com/avroshaheen?tab=repositories"
               class="social-icon"
               ><i class="fa-brands fa-github"></i
@@ -238,20 +245,37 @@
           </div>
         </div>
         <fieldset class="contact-secondary">
-          <form action="mailto:avrostu@gmail.com" method="post">
+          <form id="contactForm">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="..." />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="..."
+              required
+            />
+
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="..." />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="..."
+              required
+            />
+
             <label for="message">Message</label>
             <input
               type="text"
               name="message"
               id="message"
               placeholder="Enter your message here"
+              required
             />
+
             <input type="submit" value="Send Mail" class="send-mail" />
           </form>
+          <p id="status"></p>
         </fieldset>
       </div>
     </section>
@@ -265,16 +289,33 @@
       <div class="row">
         <h3>Connect with me:</h3>
         <p class="fw-700 fs-400">
-          <a href="https://github.com/avroshaheen?tab=repositories">GitHub</a> |
-          <a href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
-            >LinkedIn</a
+          <a
+            target="_blank"
+            class="text-customWhite"
+            href="https://github.com/avroshaheen?tab=repositories"
+            >GitHub 🔗</a
           >
           |
-          <a href="https://www.frontendmentor.io/profile/avrojp"
-            >Frontend Mentor</a
+          <a
+            target="_blank"
+            class="text-customWhite"
+            href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
+            >LinkedIn 🔗</a
           >
           |
-          <a href="https://devonrun.com">Devonrun(TechBlog)</a>
+          <a
+            target="_blank"
+            class="text-customWhite"
+            href="https://www.frontendmentor.io/profile/avrojp"
+            >Frontend Mentor 🔗</a
+          >
+          |
+          <a
+            target="_blank"
+            class="text-customWhite"
+            href="https://devonrun.com"
+            >Devonrun(TechBlog) 🔗</a
+          >
         </p>
       </div>
     </section>
