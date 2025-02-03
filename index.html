@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Developer Shaheen's Portfolio</title>
+    <title>Shaheen's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,20 +15,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
     <link rel="stylesheet" href="./resources/css/app.css" />
     <link rel="stylesheet" href="./resources/css/responsive.css" />
-    <link
-      rel="stylesheet"
-      href="./resources/css/dark_mode.css"
-      id="dark-mode-stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="./resources/css/light_mode.css"
-      id="light-mode-stylesheet"
-    />
-
     <link
       rel="shortcut icon"
       href="resources/images/favicon.png"
@@ -46,15 +34,6 @@
                 ><img src="./resources/images/logo.png" alt="Logo"
               /></a>
             </div>
-          </div>
-          <div class="color-switcher">
-            <label class="switch">
-              <input type="checkbox" id="mode-toggle" />
-              <span class="slider"></span>
-            </label>
-          </div>
-          <div class="nav-toggler" title="Open Menu">
-            <i class="fa-solid fa-bars"></i>
           </div>
         </div>
         <div class="navbar-content">
@@ -78,7 +57,7 @@
                 href="https://drive.google.com/file/d/1gzbvw_nk5dGwGGiqPYTWGYHDu8CnQAQj/view?usp=sharing"
                 class="button cv-button text-neutral fw-700"
                 title="Download CV"
-                >CV <i class="fa-solid fa-download"></i
+                >Download CV <i class="fa-solid fa-download"></i
               ></a>
             </li>
           </div>
@@ -118,17 +97,25 @@
       </div>
       <div class="row">
         <div class="hero-content">
-          <h1>Welcome to My Portfolio</h1>
+          <h1>
+            <span
+              class="text-redish"
+              style="
+                text-transform: uppercase;
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+              "
+              >Shaheen</span
+            >
+            is a web designer and front-end developer
+          </h1>
           <p>
-            I am a passionate web designer with skills in HTML, CSS, Bootstrap,
-            JavaScript, and more. Explore my work and let's create something
-            amazing together
+            He crafts responsive websites where technologies meet creativity
           </p>
           <button
             onclick="window.location.href='#works'"
             class="button btn-primary"
           >
-            See My Works
+            View My Projects
           </button>
         </div>
       </div>
@@ -148,7 +135,7 @@
       </div>
       <div class="row">
         <div class="project-container">
-          <fieldset class="project-card">
+          <div class="project-card">
             <legend class="project-title">Blinqpay Langing Page</legend>
             <div class="project-screenshot">
               <img src="./resources/images/blinqpay.png" alt="Blinqpay" />
@@ -164,8 +151,8 @@
                 >Live Project</a
               >
             </div>
-          </fieldset>
-          <fieldset class="project-card">
+          </div>
+          <div class="project-card">
             <legend class="project-title">CSS Grid Challenge</legend>
             <div class="project-screenshot">
               <img src="./resources/images/css grid.png" alt="CSS Grid" />
@@ -181,8 +168,8 @@
                 >Live Project</a
               >
             </div>
-          </fieldset>
-          <fieldset class="project-card">
+          </div>
+          <div class="project-card">
             <legend class="project-title">QR Code Component</legend>
             <div class="project-screenshot">
               <img
@@ -201,8 +188,8 @@
                 >Live Project</a
               >
             </div>
-          </fieldset>
-          <fieldset class="project-card">
+          </div>
+          <div class="project-card">
             <legend class="project-title">PingPong Score Keeper</legend>
             <div class="project-screenshot">
               <img
@@ -221,7 +208,7 @@
                 >Live Project</a
               >
             </div>
-          </fieldset>
+          </div>
         </div>
       </div>
     </section>
@@ -231,21 +218,22 @@
     <section id="contact">
       <div class="row">
         <h2>Contact Details</h2>
-        <p>Contact details and hiring information</p>
+        <p class="text-neutral op-90">Contact details and hiring information</p>
       </div>
-      <div class="row contact-details">
-        <div class="contact-primary text-pinkish fw-600 fs-350">
-          <div class="row">─Phone: 01611-220007</div>
-          <div class="row">─Email: avrostu@gmail.com</div>
-          <div class="row">
-            ─Github: https://github.com/avroshaheen?tab=repositories
-          </div>
-          <div class="row">
-            ─LinkedIn: https://www.linkedin.com/in/shahinur-rahman-593658198/
-          </div>
+      <div class="contact-grid">
+        <div class="geo-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.3807277734486!2d90.3981512752589!3d23.885000683595745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c446e5e34445%3A0x2054a715c058d344!2sSena%20Kalyan%20Commercial%20Complex.!5e1!3m2!1sen!2sbd!4v1738605989791!5m2!1sen!2sbd"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        <fieldset class="contact-secondary">
-          <form id="contactForm" autocomplete="on">
+        <div class="contact-secondary">
+          <form id="contactForm">
             <label for="name">Name</label>
             <input
               type="text"
@@ -253,8 +241,8 @@
               id="name"
               placeholder="..."
               required
+              autocomplete="on"
             />
-
             <label for="email">Email</label>
             <input
               type="email"
@@ -262,8 +250,8 @@
               id="email"
               placeholder="..."
               required
+              autocomplete="on"
             />
-
             <label for="message">Message</label>
             <input
               type="text"
@@ -271,12 +259,12 @@
               id="message"
               placeholder="Enter your message here"
               required
+              autocomplete="on"
             />
-
             <input type="submit" value="Send Mail" class="send-mail" />
           </form>
           <p id="status"></p>
-        </fieldset>
+        </div>
       </div>
     </section>
     <!-- ----------------------------------------------------------------------- -->
@@ -284,38 +272,32 @@
     <!-- ----------------------------------------------------------------------- -->
     <section id="footer">
       <div class="row">
-        <h4 class="fw-700">© 2024 AV Shaheen</h4>
+        <h4 class="fw-700">© 2025 AV Shaheen</h4>
       </div>
       <div class="row">
-        <h3>Connect with me:</h3>
+        <h3 style="text-transform: capitalize">Connect with me</h3>
         <p class="fw-700 fs-400">
           <a
             target="_blank"
-            class="text-customWhite"
+            class="text-neutral"
             href="https://github.com/avroshaheen?tab=repositories"
-            >GitHub 🔗</a
+            title="Github"
+            ><i class="fa-brands fa-github"></i> Github</a
           >
-          |
           <a
             target="_blank"
-            class="text-customWhite"
+            class="text-neutral"
             href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
-            >LinkedIn 🔗</a
+            title="Linkedin"
+            ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
           >
-          |
           <a
             target="_blank"
-            class="text-customWhite"
-            href="https://www.frontendmentor.io/profile/avrojp"
-            >Frontend Mentor 🔗</a
-          >
-          |
-          <a
-            target="_blank"
-            class="text-customWhite"
+            class="text-neutral"
             href="https://devonrun.com"
-            >Devonrun(TechBlog) 🔗</a
-          >
+            title="Devonrun.com - Tech blog"
+            ><i class="fa-brands fa-wordpress"></i> Devonrun.com
+          </a>
         </p>
       </div>
     </section>
