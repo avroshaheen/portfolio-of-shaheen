@@ -1,197 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaheen's Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
-    rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/ea53ad56d9.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <link rel="stylesheet" href="./resources/css/app.css" />
-  <link rel="stylesheet" href="./resources/css/responsive.css" />
-  <link rel="shortcut icon" href="resources/images/favicon.png" type="image/x-icon" />
-</head>
-
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="navbar-header">
-        <div class="nav-left">
-          <div class="logo" title="Go To Home">
-            <a href="#"><img src="./resources/images/logo.png" alt="Logo" /></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Shaheen" />
+    <meta
+      name="description"
+      content="Portfolio of Shaheen – Frontend Developer specializing in responsive web design, React.js, JavaScript, and modern UI/UX solutions."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, Web Design, Web Development, React.js, JavaScript, HTML, CSS, Tailwind CSS, Portfolio, UI/UX, Bangladesh Developer"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1d3557" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shaheen - Web Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore my portfolio showcasing projects in React.js, JavaScript, and modern web development."
+    />
+    <meta
+      property="og:image"
+      content="https://avroshaheen.github.io/portfolio-of-shaheen/images/profile.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://avroshaheen.github.io/portfolio-of-shaheen/"
+    />
+    <meta property="og:type" content="website" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shaheen - Web Developer Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Frontend Developer | React.js | JavaScript | UI/UX | Explore my latest projects and skills."
+    />
+    <meta
+      name="twitter:image"
+      content="https://avroshaheen.github.io/portfolio-of-shaheen/images/profile.jpg"
+    />
+    <!-- Contact & Social Profiles -->
+    <link
+      rel="canonical"
+      href="https://avroshaheen.github.io/portfolio-of-shaheen/"
+    />
+    <meta property="og:email" content="avrostu@gmail.com" />
+    <meta property="og:phone_number" content="+8801611220007" />
+    <meta property="og:site_name" content="Shaheen - Web Developer" />
+    <title>Shaheen's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ea53ad56d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="./resources/css/reset.css" />
+    <link rel="stylesheet" href="./resources/css/app.css" />
+    <link rel="stylesheet" href="./resources/css/responsive.css" />
+    <link
+      rel="shortcut icon"
+      href="resources/images/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar-header">
+          <div class="nav-left">
+            <div class="logo" title="Back To Home">
+              <a href="#"
+                ><img src="./resources/images/logo.gif" alt="Logo"
+              /></a>
+            </div>
+          </div>
+          <div class="nav-toggler" title="Open Menu">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-times"></i>
           </div>
         </div>
-        <div class="nav-toggler" title="Open Menu">
-          <i class="fa-solid fa-bars"></i>
+        <div class="navbar-content">
+          <ul class="nav-links">
+            <li><a href="#" class="text-neutral fw-700">Home</a></li>
+            <li><a href="#works" class="text-neutral fw-700">Projects</a></li>
+            <li><a href="#contact" class="text-neutral fw-700">Contact</a></li>
+            <li>
+              <a
+                target="_blank"
+                href="https://devonrun.com/"
+                class="text-neutral fw-700"
+                ><span>Blog</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav-right">
+            <li>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1gzbvw_nk5dGwGGiqPYTWGYHDu8CnQAQj/view?usp=sharing"
+                class="button cv-button text-neutral fw-700"
+                title="Download CV"
+                >Download CV <i class="fa-solid fa-download"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Hero Section                               -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="hero" class="hero">
+      <div class="row">
+        <div class="hero-image">
+          <img
+            src="./resources/images/person-image.png"
+            alt="av shaheen"
+            class="av-shaheen"
+          />
+          <div class="social-links-list">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
+              class="social-icon"
+              ><i class="fa-brands fa-linkedin"></i></a
+            ><a
+              target="_blank"
+              href="mailto:avrostu@gmail.com"
+              class="social-icon"
+              ><i class="fa-regular fa-envelope"></i></a
+            ><a
+              target="_blank"
+              href="https://github.com/avroshaheen?tab=repositories"
+              class="social-icon"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
         </div>
       </div>
-      <div class="navbar-content">
-        <div class="nav-center">
-          <li><a href="#" class="text-neutral fw-700">HOME</a></li>
-          <li><a href="#works" class="text-neutral fw-700">WORKS</a></li>
-          <li><a href="#contact" class="text-neutral fw-700">CONTACT</a></li>
-          <li>
-            <a target="_blank" href="https://devonrun.com/" class="text-neutral fw-700"><span>BLOG</span>
-            </a>
-          </li>
-        </div>
-        <div class="nav-right">
-          <li>
-            <a target="_blank" href="https://drive.google.com/file/d/1gzbvw_nk5dGwGGiqPYTWGYHDu8CnQAQj/view?usp=sharing"
-              class="button cv-button text-neutral fw-700" title="Download CV">Download CV <i
-                class="fa-solid fa-download"></i></a>
-          </li>
+      <div class="row">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            I'm a <span id="hero-terminal-text"></span>
+            <d iv class="console-underscore" id="console">&#95;</d>
+          </h1>
+          <p>I craft responsive websites where technologies meet creativity</p>
+          <button
+            onclick="window.location.href='#contact'"
+            class="button btn-primary"
+          >
+            Contact Me
+          </button>
         </div>
       </div>
-    </nav>
-  </header>
-  <!-- ----------------------------------------------------------------------- -->
-  <!--                              Hero Section                               -->
-  <!-- ----------------------------------------------------------------------- -->
-  <section id="hero">
-    <div class="row">
-      <div class="hero-image">
-        <img src="./resources/images/person-image.png" alt="av shaheen" class="av-shaheen" />
-        <div class="social-links-list">
-          <a target="_blank" href="https://www.linkedin.com/in/shahinur-rahman-593658198/" class="social-icon"><i
-              class="fa-brands fa-linkedin"></i></a><a target="_blank" href="mailto:avrostu@gmail.com"
-            class="social-icon"><i class="fa-regular fa-envelope"></i></a><a target="_blank"
-            href="https://github.com/avroshaheen?tab=repositories" class="social-icon"><i
-              class="fa-brands fa-github"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="hero-content">
-        <h1>
-          <span class="text-redish" style="
-                text-transform: uppercase;
-                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-              ">Shaheen</span>
-          is a web designer and front-end developer
-        </h1>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                  WORKS                                  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="works">
+      <div class="row">
+        <h2>Projects</h2>
         <p>
-          He crafts responsive websites where technologies meet creativity
+          For more recent projects, please visit my
+          <a href="https://github.com/avroshaheen/"
+            ><i class="fa-brands fa-github"> </i> Github Account</a
+          >
         </p>
-        <button onclick="window.location.href='#works'" class="button btn-primary">
-          View My Projects
-        </button>
       </div>
-    </div>
-  </section>
-  <!-- ----------------------------------------------------------------------- -->
-  <!--                                  WORKS                                  -->
-  <!-- ----------------------------------------------------------------------- -->
-  <section id="works">
-    <div class="row">
-      <h2>WORKS</h2>
-      <p class="text-neutral">
-        Some of my works below. For more recent projects please visit my
-        <a href="https://github.com/avroshaheen/"><i class="fa-brands fa-github"> </i> Github Account</a>
-      </p>
-    </div>
-    <div class="row">
-      <div class="project-container">
-        <div class="project-card">
-          <legend class="project-title">Blinqpay Langing Page</legend>
-          <div class="project-screenshot">
-            <img src="./resources/images/blinqpay.png" alt="Blinqpay" />
+      <div class="row">
+        <div class="project-container">
+          <div class="project-card">
+            <h3 class="project-title">Blinqpay Langing Page</h3>
+            <div class="project-screenshot">
+              <img src="./resources/images/blinqpay.png" alt="Blinqpay" />
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/avroshaheen/bank-landing-page"
+                class="code"
+                >Source Code</a
+              ><a
+                href="https://avroshaheen.github.io/bank-landing-page/"
+                class="live"
+                >Live Project</a
+              >
+            </div>
           </div>
-          <div class="project-links">
-            <a href="https://github.com/avroshaheen/bank-landing-page" class="code">Source Code</a><a
-              href="https://avroshaheen.github.io/bank-landing-page/" class="live">Live Project</a>
+          <div class="project-card">
+            <h3 class="project-title">CSS Grid Challenge</h3>
+            <div class="project-screenshot">
+              <img src="./resources/images/css grid.png" alt="CSS Grid" />
+            </div>
+            <div class="project-links">
+              <a
+                href="https://avroshaheen.github.io/frontendmentor-css-grid-challenge/"
+                class="code"
+                >Source Code</a
+              ><a
+                href="https://github.com/avroshaheen/%20frontendmentor-css-grid-challenge/"
+                class="live"
+                >Live Project</a
+              >
+            </div>
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">QR Code Component</h3>
+            <div class="project-screenshot">
+              <img
+                src="./resources/images/QR code component.png"
+                alt="QRCode"
+              />
+            </div>
+            <div class="project-links">
+              <a
+                href="https://avroshaheen.github.io/qr-code-component/"
+                class="code"
+                >Source Code</a
+              ><a
+                href="https://github.com/avroshaheen/qr-code-component/"
+                class="live"
+                >Live Project</a
+              >
+            </div>
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">PingPong Score Keeper</h3>
+            <div class="project-screenshot">
+              <img
+                src="./resources/images/Ping Pong Score Keeper.png"
+                alt="Pingpong"
+              />
+            </div>
+            <div class="project-links">
+              <a
+                href="https://avroshaheen.github.io/pingpongscore/"
+                class="code"
+                >Source Code</a
+              ><a
+                href="https://avroshaheen.github.io/pingpongscore/"
+                class="live"
+                >Live Project</a
+              >
+            </div>
           </div>
         </div>
-        <div class="project-card">
-          <legend class="project-title">CSS Grid Challenge</legend>
-          <div class="project-screenshot">
-            <img src="./resources/images/css grid.png" alt="CSS Grid" />
-          </div>
-          <div class="project-links">
-            <a href="https://avroshaheen.github.io/frontendmentor-css-grid-challenge/" class="code">Source Code</a><a
-              href="https://github.com/avroshaheen/%20frontendmentor-css-grid-challenge/" class="live">Live Project</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <legend class="project-title">QR Code Component</legend>
-          <div class="project-screenshot">
-            <img src="./resources/images/QR code component.png" alt="QRCode" />
-          </div>
-          <div class="project-links">
-            <a href="https://avroshaheen.github.io/qr-code-component/" class="code">Source Code</a><a
-              href="https://github.com/avroshaheen/qr-code-component/" class="live">Live Project</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <legend class="project-title">PingPong Score Keeper</legend>
-          <div class="project-screenshot">
-            <img src="./resources/images/Ping Pong Score Keeper.png" alt="Pingpong" />
-          </div>
-          <div class="project-links">
-            <a href="https://avroshaheen.github.io/pingpongscore/" class="code">Source Code</a><a
-              href="https://avroshaheen.github.io/pingpongscore/" class="live">Live Project</a>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
-  <!-- ----------------------------------------------------------------------- -->
-  <!--                             Contact Section                             -->
-  <!-- ----------------------------------------------------------------------- -->
-  <section id="contact">
-    <div class="row">
-      <h2>Contact Details</h2>
-      <p class="text-neutral op-90">Contact details and hiring information</p>
-    </div>
-    <div class="contact-grid">
-      <div class="geo-map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.3807277734486!2d90.3981512752589!3d23.885000683595745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c446e5e34445%3A0x2054a715c058d344!2sSena%20Kalyan%20Commercial%20Complex.!5e1!3m2!1sen!2sbd!4v1738605989791!5m2!1sen!2sbd"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             Contact Section                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section id="contact">
+      <div class="row">
+        <h2>Contact</h2>
+        <p id="status">
+          For project inquiries or collaboration opportunities, feel free to get
+          in touch
+        </p>
       </div>
-      <div class="contact-secondary">
-        <form id="contactForm">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="..." required autocomplete="on" />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="..." required autocomplete="on" />
-          <label for="message">Message</label>
-          <input type="text" name="message" id="message" placeholder="Enter your message here" required
-            autocomplete="on" />
-          <input type="submit" value="Send Mail" class="send-mail" />
-        </form>
-        <p id="status"></p>
-      </div>
-    </div>
-  </section>
-  <!-- ----------------------------------------------------------------------- -->
-  <!--                                 FOOTER                                  -->
-  <!-- ----------------------------------------------------------------------- -->
-  <section id="footer">
-    <div class="row">
-      <h4 class="fw-700">© 2025 AV Shaheen</h4>
-    </div>
-    <div class="row">
-      <h3 style="text-transform: capitalize">Connect with me</h3>
-      <p class="fw-700 fs-400">
-        <a target="_blank" class="text-neutral" href="https://github.com/avroshaheen?tab=repositories" title="Github"><i
-            class="fa-brands fa-github"></i> Github</a>
-        <a target="_blank" class="text-neutral" href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
-          title="Linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a target="_blank" class="text-neutral" href="https://devonrun.com" title="Devonrun.com - Tech blog"><i
-            class="fa-brands fa-wordpress"></i> Devonrun.com
-        </a>
-      </p>
-    </div>
-  </section>
-  <!-- Script Files -->
-  <script src="./resources/js/app.js"></script>
-</body>
+      <div class="contact-grid">
+        <div class="geo-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.3807277734486!2d90.3981512752589!3d23.885000683595745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c446e5e34445%3A0x2054a715c058d344!2sSena%20Kalyan%20Commercial%20Complex.!5e1!3m2!1sen!2sbd!4v1738605989791!5m2!1sen!2sbd"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <form id="contactForm" class="contact-secondary">
+          <div class="contact-name">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Type name..."
+              required
+              autocomplete="on"
+            />
+          </div>
+          <div class="contact-email">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Type email..."
+              required
+              autocomplete="on"
+            />
+          </div>
+          <div class="contact-message">
+            <label for="message">Message</label>
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Enter your message here"
+              required
+              autocomplete="on"
+            />
+          </div>
 
+          <button type="submit" class="send-mail">Send Mail</button>
+        </form>
+      </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 FOOTER                                  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section class="footer">
+      <div class="footer-links">
+        <h3 style="text-transform: capitalize">Connect with Me</h3>
+        <div class="footer-link">
+          <a
+            target="_blank"
+            href="https://github.com/avroshaheen?tab=repositories"
+            title="Github"
+          >
+            <i class="fa-brands fa-github"></i> Github
+          </a>
+        </div>
+        <div class="footer-link">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
+            title="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+        <div class="footer-link">
+          <a
+            target="_blank"
+            href="https://devonrun.com"
+            title="Devonrun.com - Tech blog"
+          >
+            <i class="fa-brands fa-wordpress"></i> Devonrun.com
+          </a>
+        </div>
+      </div>
+
+      <p class="credit">© 2025 AV Shaheen. All rights reserved. This website and its content may not be reproduced, distributed, or used in any form without prior permission.</p>
+    </section>
+
+    <!-- Script Files -->
+    <script src="./resources/js/app.js" defer></script>
+  </body>
 </html>

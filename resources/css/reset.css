@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: 0;
+}
+
+html {
+   font-size: 16px;
+   line-height: 1.5;
+   scroll-behavior: smooth;
+   -webkit-text-size-adjust: 100%;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+   color: #333;
+   background-color: #fff;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+}
+
+ul,
+ol {
+   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+   margin: 0;
+   font-weight: normal;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
+button {
+   background: none;
+   border: none;
+   cursor: pointer;
+   font-family: inherit;
+   font-size: inherit;
+}
+
+input,
+textarea,
+select,
+button {
+   font-family: inherit;
+   font-size: inherit;
+   background: none;
+   border: none;
+   outline: none;
+   color: inherit;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+fieldset,
+legend {
+   border: none;
+   padding: 0;
+   margin: 0;
+}
+
+iframe {
+   width: 100%;
+   border: none;
+}
+
+:focus {
+   outline: none;
+}
