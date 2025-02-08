@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var waiting = false;
     var target = document.getElementById(id);
     target.setAttribute("style", "color:" + colors[0]);
+
+    // Add the text typing effect only to the span with the dynamic text
     window.setInterval(function () {
       if (letterCount === 0 && waiting === false) {
         waiting = true;
@@ -60,13 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
         letterCount += x;
       }
     }, 170);
+
+    // Handle blinking underscore animation separately for the console effect
     window.setInterval(function () {
       if (visible === true) {
         con.className = "console-underscore hidden";
         visible = false;
       } else {
         con.className = "console-underscore";
-
         visible = true;
       }
     }, 500);

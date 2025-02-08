@@ -292,7 +292,6 @@ h2+p {
   background: radial-gradient(circle at center,
       var(--clr-blueish),
       var(--clr-accent));
-  min-height: 100vh;
 }
 
 .hero-image {
@@ -302,6 +301,7 @@ h2+p {
 .hero-title {
   font-size: var(--fs-450);
   color: var(--clr-pinkish);
+  text-transform: uppercase;
   text-align: center;
   line-height: .7;
   font-family: var(--ff-headings);
@@ -440,7 +440,60 @@ h2+p {
   background-color: var(--clr-blueish);
 }
 
-/* Contact Section */
+/* -------------------------------------------------------------------------- */
+/*                               Service Section                              */
+/* -------------------------------------------------------------------------- */
+.services {
+  background: radial-gradient(circle at center,
+      var(--clr-blueish),
+      var(--clr-accent));
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: start;
+  gap: var(--space-lg);
+
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.services__item:hover {
+  transform: translateY(-5px);
+}
+
+
+.services__item-title {
+  font-size: var(--fs-400);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-md);
+}
+
+.services__item-desc {
+  font-size: var(--fs-300);
+  color: var(--clr-neutral);
+  line-height: 1.2;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Contact Section                              */
+/* -------------------------------------------------------------------------- */
 #contact {
   background: radial-gradient(circle at center,
       var(--clr-blueish),
