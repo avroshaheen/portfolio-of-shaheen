@@ -1,0 +1,245 @@
+/* resources/css/responsive.css */
+/* 38em = 608px */
+@media (min-width: 38em) {
+
+   /* Hero Section */
+   .hero {
+      grid-template-columns: 1fr 1fr;
+      align-items: space-between;
+      padding: var(--space-xl) var(--space-md);
+   }
+
+   .hero p {
+      text-align: left;
+      padding-inline: 0;
+      font-weight: bold;
+   }
+
+   .hero-content {
+      align-items: flex-start;
+   }
+
+   .hero-title {
+      line-height: .8;
+   }
+
+   /* Projects */
+   .project-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   /* Services */
+   .services__list {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   /* Contact */
+   .contact-grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+   }
+
+   .contact-secondary {
+      height: 100%;
+      padding: 0;
+      justify-content: center;
+      gap: var(--space-md);
+   }
+
+   .geo-map {
+      border: none;
+      box-shadow: none;
+   }
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+
+   /* Navigation */
+   .navbar {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      padding-inline: var(--space-xs);
+   }
+
+   .navbar-header {
+      width: initial;
+      height: 100%;
+      display: inline-flex;
+      justify-content: flex-start;
+      padding: 0;
+   }
+
+   .logo {
+      max-width: 100px;
+   }
+
+   .nav-toggler {
+      display: none;
+   }
+
+   .navbar-content {
+      padding: 0;
+      width: initial;
+      height: initial;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: var(--space-xxl);
+      background: initial;
+      border: 0;
+   }
+
+   .nav-links {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-md);
+   }
+
+   .nav-links li {
+      margin-bottom: initial;
+      padding: 0;
+   }
+
+   .nav-links li a {
+      display: inline-block;
+      border: initial;
+      padding: var(--space-xxs) var(--space-xs);
+      font-size: var(--fs-200);
+   }
+
+
+   .cv-button {
+      display: inline-block;
+      border: 0;
+      font-size: var(--fs-200);
+   }
+
+   /* Hero */
+   .hero-content {
+      order: -1;
+   }
+
+   .hero-image img {
+      max-width: 400px;
+   }
+
+   /* Projects */
+   .project-container {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   /* Services */
+   .services__list {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .services__item-icon {
+      max-width: 25%;
+   }
+
+
+   /* Footer */
+   .footer {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-xxl);
+   }
+}
+
+/* 62em = 992px */
+@media (min-width: 62em) {
+
+   /* Typography */
+   h2 {
+      font-size: var(--fs-500);
+   }
+
+   h2+p {
+      font-size: var(--fs-400);
+      max-width: 75ch;
+      margin-inline: auto;
+   }
+
+   /* Hero */
+   .hero {
+      gap: var(--space-xxl);
+   }
+
+   /* Projects */
+   .project-container {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   /* Services */
+   .services__list {
+      gap: var(--space-xl);
+   }
+
+   /* Contact */
+   .contact-secondary {
+      padding: var(--space-xl);
+   }
+
+   .geo-map {
+      height: 500px;
+      padding-bottom: 0;
+   }
+
+   .geo-map iframe {
+      border-radius: 8px;
+   }
+}
+
+/* 75em = 1200px */
+@media (min-width: 75em) {
+
+   /* Layout */
+   .row {
+      padding-inline: var(--space-xxl);
+   }
+
+   /* Hero */
+   .hero-image img {
+      max-width: 500px;
+   }
+
+   /* Projects */
+   .project-card {
+      padding: var(--space-md);
+   }
+
+   /* Services */
+   .services__item {
+      padding: var(--space-lg);
+   }
+
+   /* Contact */
+   .geo-map {
+      height: 600px;
+   }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 48em) {
+   .geo-map {
+      order: -1;
+   }
+
+   .services__item-icon {
+      max-width: 20%;
+   }
+}
+
+/* 2K+ Screens */
+@media (min-width: 100em) {
+   html {
+      font-size: 110%;
+   }
+
+   .row {
+      max-width: 1800px;
+   }
+}

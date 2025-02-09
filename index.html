@@ -124,49 +124,45 @@
     <!--                              Hero Section                               -->
     <!-- ----------------------------------------------------------------------- -->
     <section id="hero" class="hero">
-      <div class="row">
-        <div class="hero-image">
-          <img src="./resources/images/person-shaheen.png" alt="AV Shaheen" />
-          <div class="social-links-list">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
-              class="social-icon"
-              ><i class="fa-brands fa-linkedin"></i></a
-            ><a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:avrostu@gmail.com"
-              class="social-icon"
-              ><i class="fa-regular fa-envelope"></i></a
-            ><a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/avroshaheen"
-              class="social-icon"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </div>
+      <div class="hero-image">
+        <img src="./resources/images/person-shaheen.png" alt="AV Shaheen" />
+        <div class="social-links-list">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
+            class="social-icon"
+            ><i class="fa-brands fa-linkedin"></i></a
+          ><a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:avrostu@gmail.com"
+            class="social-icon"
+            ><i class="fa-regular fa-envelope"></i></a
+          ><a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/avroshaheen"
+            class="social-icon"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </div>
       </div>
-      <div class="row">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            I'm a <span id="hero-terminal-text"></span>
-            <d iv class="console-underscore" id="console">&#95;</d>
-          </h1>
-          <p>
-            I design and develop websites that are fast, modern, and ready to
-            make an impact
-          </p>
-          <button
-            onclick="window.location.href='#contact'"
-            class="button btn-primary"
-          >
-            Contact Me
-          </button>
-        </div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          I'm a <span id="hero-terminal-text"></span>
+          <d iv class="console-underscore" id="console">&#95;</d>
+        </h1>
+        <p>
+          I design and develop websites that are fast, modern, and ready to make
+          an impact
+        </p>
+        <button
+          onclick="window.location.href='#contact'"
+          class="button btn-primary"
+        >
+          Contact Me
+        </button>
       </div>
     </section>
     <!-- ----------------------------------------------------------------------- -->
@@ -269,48 +265,78 @@
     <!-- ----------------------------------------------------------------------- -->
     <section class="services" id="services">
       <h2 class="services__title">Services</h2>
-      <p>Offering top-notch services to create modern, fast, and user-friendly web experiences.</p>
-    
+      <p>
+        Offering top-notch services to create modern, fast, and user-friendly
+        web experiences.
+      </p>
+
       <div class="services__list">
         <!-- Web Design & Development -->
         <div class="services__item services__item--card">
-          <i class="fas fa-laptop-code fa-2x text-neutral"></i>
+          <img
+            src="./resources/images/web-development.png"
+            class="services__item-icon"
+            alt="Web Development"
+          />
           <h3 class="services__item-title">Web Design & Development</h3>
           <p class="services__item-desc">
-            Create visually appealing, responsive websites using HTML, CSS, and JavaScript.
+            Create visually appealing, responsive websites using HTML, CSS, and
+            JavaScript.
           </p>
         </div>
-    
+
         <!-- Landing Page Design -->
         <div class="services__item">
-          <i class="fas fa-bullhorn fa-2x text-neutral"></i>
+          <img
+            src="./resources/images/landing-page.png"
+            class="services__item-icon"
+            alt="Landing Page Development"
+          />
+
           <h3 class="services__item-title">Landing Page Design</h3>
           <p class="services__item-desc">
-            Design and develop high-converting landing pages with a mobile-first approach.
+            Design and develop high-converting landing pages with a mobile-first
+            approach.
           </p>
         </div>
-    
+
         <!-- Portfolio Websites -->
         <div class="services__item">
-          <i class="fas fa-briefcase fa-2x text-neutral"></i>
+          <img
+            src="./resources/images/portfolio.png"
+            class="services__item-icon"
+            alt="Portfolio Development"
+          />
+
           <h3 class="services__item-title">Portfolio Websites</h3>
           <p class="services__item-desc">
-            Build personal portfolio websites to showcase your skills and projects.
+            Build personal portfolio websites to showcase your skills and
+            projects.
           </p>
         </div>
-    
+
         <!-- Design to HTML (Figma, XD, PSD) -->
         <div class="services__item">
-          <i class="fas fa-paint-brush fa-2x text-neutral"></i>
+          <img
+            src="./resources/images/figma.png"
+            class="services__item-icon"
+            alt="Figma Conversion"
+          />
+
           <h3 class="services__item-title">Design to HTML</h3>
           <p class="services__item-desc">
-            Convert Figma, XD, or PSD designs into responsive, pixel-perfect websites.
+            Convert Figma, XD, or PSD designs into responsive, pixel-perfect
+            websites.
           </p>
         </div>
-    
+
         <!-- Bootstrap Websites -->
         <div class="services__item">
-          <i class="fab fa-bootstrap fa-2x text-neutral"></i>
+          <img
+            src="./resources/images/bootstrap.png"
+            class="services__item-icon"
+            alt="Bootstrap Development"
+          />
           <h3 class="services__item-title">Bootstrap Websites</h3>
           <p class="services__item-desc">
             Develop fast, responsive websites using the Bootstrap framework.
@@ -318,7 +344,6 @@
         </div>
       </div>
     </section>
-    
 
     <!-- ----------------------------------------------------------------------- -->
     <!--                             Contact Section                             -->
@@ -341,6 +366,7 @@
           ></iframe>
         </div>
         <form id="contactForm" class="contact-secondary">
+          <h3>Let's Discuss About Projects</h3>
           <div class="contact-name">
             <label for="name">Name</label>
             <input
@@ -383,8 +409,8 @@
     <!--                                 FOOTER                                  -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="footer">
+      <h3 style="text-transform: capitalize">Let's Connect <i class="fa-duotone fa-solid fa-rss"></i></h3>
       <div class="footer-links">
-        <h3 style="text-transform: capitalize">Let's Connect</h3>
         <div class="footer-link">
           <a
             target="_blank"
@@ -392,7 +418,7 @@
             href="https://github.com/avroshaheen"
             title="Github"
           >
-            <i class="fa-brands fa-github"></i> Github
+            <i class="fa-brands fa-github"></i>
           </a>
         </div>
         <div class="footer-link">
@@ -402,7 +428,7 @@
             href="https://www.linkedin.com/in/shahinur-rahman-593658198/"
             title="LinkedIn"
           >
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
+            <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
         <div class="footer-link">
@@ -412,16 +438,12 @@
             href="https://devonrun.com"
             title="Blog - Devonrun.com"
           >
-            <i class="fa-brands fa-wordpress"></i> Devonrun.com
+            <i class="fa-brands fa-wordpress"></i>
           </a>
         </div>
       </div>
 
-      <p class="credit">
-        © 2025 AV Shaheen. All rights reserved. This website and its content may
-        not be reproduced, distributed, or used in any form without prior
-        permission.
-      </p>
+      <p class="credit">© 2025 AV Shaheen. All rights reserved.</p>
     </section>
 
     <!-- Script Files -->
