@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Shaheen" />
     <meta
@@ -34,11 +35,11 @@
     <meta name="twitter:title" content="Shaheen - Web Developer Portfolio" />
     <meta
       name="twitter:description"
-      content="Frontend Developer | React.js | JavaScript | UI/UX | Explore my latest projects and skills."
+      content="Frontend Developer | React.js(learning) | JavaScript | Explore my latest projects and skills."
     />
     <meta
       name="twitter:image"
-      content="https://avroshaheen.github.io/portfolio-of-shaheen/images/profile.jpg"
+      content="https://avroshaheen.github.io/portfolio-of-shaheen/resources/images/person-shaheen.png"
     />
     <!-- Contact & Social Profiles -->
     <link
@@ -48,21 +49,27 @@
     <meta property="og:email" content="avrostu@gmail.com" />
     <meta property="og:phone_number" content="+8801611220007" />
     <meta property="og:site_name" content="Shaheen - Web Developer" />
+    <!-- Title -->
     <title>Shaheen's Portfolio</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/ea53ad56d9.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Email JS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./resources/css/reset.css" />
     <link rel="stylesheet" href="./resources/css/app.css" />
     <link rel="stylesheet" href="./resources/css/responsive.css" />
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="resources/images/favicon.png"
@@ -70,7 +77,11 @@
     />
   </head>
   <body>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 Header                                  -->
+    <!-- ----------------------------------------------------------------------- -->
     <header class="header">
+      <!-- Navigation -->
       <nav class="navbar row">
         <div class="navbar-header">
           <div class="nav-left">
@@ -89,12 +100,26 @@
         </div>
         <div class="navbar-content">
           <ul class="nav-links">
-            <li><a href="#" class="text-neutral fw-700">Home</a></li>
-            <li><a href="#works" class="text-neutral fw-700">Projects</a></li>
             <li>
-              <a href="#services" class="text-neutral fw-700">Services</a>
+              <a
+                href="#hero"
+                class="nav-link text-neutral fw-700 active-nav-link"
+                >Home</a
+              >
             </li>
-            <li><a href="#contact" class="text-neutral fw-700">Contact</a></li>
+            <li>
+              <a href="#works" class="nav-link text-neutral fw-700">Projects</a>
+            </li>
+            <li>
+              <a href="#services" class="nav-link text-neutral fw-700"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link text-neutral fw-700"
+                >Contact</a
+              >
+            </li>
             <li>
               <a
                 target="_blank"
@@ -113,7 +138,7 @@
                 href="https://drive.google.com/file/d/1gzbvw_nk5dGwGGiqPYTWGYHDu8CnQAQj/view?usp=sharing"
                 class="button cv-button text-neutral fw-700"
                 title="Download CV"
-                >Download CV <i class="fa-solid fa-download"></i
+                >Resume <i class="fa-solid fa-download"></i
               ></a>
             </li>
           </ul>
@@ -166,9 +191,9 @@
       </div>
     </section>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                                  WORKS/Projects                         -->
+    <!--                             Works/Projects  Section                     -->
     <!-- ----------------------------------------------------------------------- -->
-    <section id="works" class="row">
+    <section id="works" class="works row">
       <div>
         <h2>Projects</h2>
         <p>
@@ -210,11 +235,11 @@
             </div>
             <div class="project-links">
               <a
-                href="https://avroshaheen.github.io/frontendmentor-css-grid-challenge/"
+                href="https://github.com/avroshaheen/frontendmentor-css-grid-challenge/"
                 class="code"
                 >Source Code</a
               ><a
-                href="https://github.com/avroshaheen/%20frontendmentor-css-grid-challenge/"
+                href="https://avroshaheen.github.io/frontendmentor-css-grid-challenge/"
                 class="live"
                 >Live Project</a
               >
@@ -227,11 +252,11 @@
             </div>
             <div class="project-links">
               <a
-                href="https://avroshaheen.github.io/qr-code-component/"
+                href="https://github.com/avroshaheen/qr-code-component/"
                 class="code"
                 >Source Code</a
               ><a
-                href="https://github.com/avroshaheen/qr-code-component/"
+                href="https://avroshaheen.github.io/qr-code-component/"
                 class="live"
                 >Live Project</a
               >
@@ -247,7 +272,7 @@
             </div>
             <div class="project-links">
               <a
-                href="https://avroshaheen.github.io/pingpongscore/"
+                href="https://github.com/avroshaheen/pingpongscore/"
                 class="code"
                 >Source Code</a
               ><a
@@ -391,6 +416,7 @@
               autocomplete="on"
             />
           </div>
+          <p id="status"></p>
           <button type="submit" class="send-mail">Send Mail</button>
         </form>
       </div>
@@ -438,7 +464,9 @@
         © <span id="year"></span> AV Shaheen. All rights reserved.
       </p>
     </section>
-    <!-- Script Files -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Script Files                               -->
+    <!-- ----------------------------------------------------------------------- -->
     <script src="./resources/js/app.js" defer></script>
   </body>
 </html>

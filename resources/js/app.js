@@ -1,5 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Navbar Toggle
+  /* -------------------------------------------------------------------------- */
+  /*                       Nav Background Change on Scroll                      */
+  /* -------------------------------------------------------------------------- */
+  const navbar = document.querySelector(".navbar");
+  const navbarHeight = navbar.offsetHeight;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > navbarHeight) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  /* -------------------------------------------------------------------------- */
+  /*                             Navbar Link Active Status                      */
+  /* -------------------------------------------------------------------------- */
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+  window.addEventListener("scroll", function () {
+    let currentSection = null;
+    let minDistance = Infinity;
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const distance = Math.abs(rect.top - window.innerHeight / 3);
+      if (
+        rect.top >= -section.clientHeight / 2 &&
+        rect.top < window.innerHeight / 2
+      ) {
+        if (distance < minDistance) {
+          minDistance = distance;
+          currentSection = section.getAttribute("id");
+        }
+      }
+    });
+    navLinks.forEach((link) => {
+      link.classList.remove("active-nav-link");
+      if (
+        currentSection &&
+        link.getAttribute("href").includes(currentSection)
+      ) {
+        link.classList.add("active-nav-link");
+      }
+    });
+  });
+  /* -------------------------------------------------------------------------- */
+  /*                               Mobile Navbar Toggle                         */
+  /* -------------------------------------------------------------------------- */
   const menuIcon = document.querySelector(".nav-toggler");
   const navbarContent = document.querySelector(".navbar-content");
   menuIcon.addEventListener("click", function (event) {
@@ -16,7 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
       menuIcon.classList.remove("show");
     }
   });
-  // Terminal Like Hero Title
+  /* -------------------------------------------------------------------------- */
+  /*                            Hero Title Animation                            */
+  /* -------------------------------------------------------------------------- */
   // function([string1, string2],target id,[color1,color2])
   consoleText(["Web Designer", "Frontend Developer"], "hero-terminal-text", [
     "white",
@@ -68,7 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 500);
   }
-  // EmailJS Integration
+  /* -------------------------------------------------------------------------- */
+  /*                             EmailJS Integration                            */
+  /* -------------------------------------------------------------------------- */
   (function () {
     emailjs.init("dShqwFPB0DRVmOlF3"); // Your Public Key
   })();
@@ -91,6 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   }
+  /* -------------------------------------------------------------------------- */
+  /*                             Dynamic Credit Year                            */
+  /* -------------------------------------------------------------------------- */
   const year = new Date().getFullYear();
   console.log(year);
   document.getElementById("year").textContent = new Date().getFullYear();
