@@ -2,13 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Navbar Toggle
   const menuIcon = document.querySelector(".nav-toggler");
   const navbarContent = document.querySelector(".navbar-content");
-
   menuIcon.addEventListener("click", function (event) {
     navbarContent.classList.toggle("show");
     menuIcon.classList.toggle("show");
     event.stopPropagation();
   });
-
   document.addEventListener("click", function (event) {
     if (
       !navbarContent.contains(event.target) &&
@@ -18,13 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
       menuIcon.classList.remove("show");
     }
   });
-
   // Terminal Like Hero Title
   // function([string1, string2],target id,[color1,color2])
   consoleText(["Web Designer", "Frontend Developer"], "hero-terminal-text", [
     "white",
   ]);
-
   function consoleText(words, id, colors) {
     if (colors === undefined) colors = ["#fff"];
     var visible = true;
@@ -34,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var waiting = false;
     var target = document.getElementById(id);
     target.setAttribute("style", "color:" + colors[0]);
-
     // Add the text typing effect only to the span with the dynamic text
     window.setInterval(function () {
       if (letterCount === 0 && waiting === false) {
@@ -62,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
         letterCount += x;
       }
     }, 170);
-
     // Handle blinking underscore animation separately for the console effect
     window.setInterval(function () {
       if (visible === true) {
@@ -74,19 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 500);
   }
-
   // EmailJS Integration
   (function () {
     emailjs.init("dShqwFPB0DRVmOlF3"); // Your Public Key
   })();
-
   const contactForm = document.getElementById("contactForm");
   const statusMessage = document.getElementById("status");
-
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
-
       emailjs
         .sendForm("getjob_avro", "template_tmavbum", this)
         .then(() => {
@@ -101,4 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   }
+  const year = new Date().getFullYear();
+  console.log(year);
+  document.getElementById("year").textContent = new Date().getFullYear();
 });

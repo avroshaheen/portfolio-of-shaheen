@@ -71,7 +71,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navbar">
+      <nav class="navbar row">
         <div class="navbar-header">
           <div class="nav-left">
             <div class="logo" title="Back To Home">
@@ -123,8 +123,8 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                              Hero Section                               -->
     <!-- ----------------------------------------------------------------------- -->
-    <section id="hero" class="hero">
-      <div class="hero-image">
+    <section id="hero" class="hero row">
+      <div class="hero-image row">
         <img src="./resources/images/person-shaheen.png" alt="AV Shaheen" />
         <div class="social-links-list">
           <a
@@ -148,7 +148,7 @@
           ></a>
         </div>
       </div>
-      <div class="hero-content">
+      <div class="hero-content row">
         <h1 class="hero-title">
           I'm a <span id="hero-terminal-text"></span>
           <d iv class="console-underscore" id="console">&#95;</d>
@@ -166,10 +166,10 @@
       </div>
     </section>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                                  WORKS                                  -->
+    <!--                                  WORKS/Projects                         -->
     <!-- ----------------------------------------------------------------------- -->
-    <section id="works">
-      <div class="row">
+    <section id="works" class="row">
+      <div>
         <h2>Projects</h2>
         <p>
           Discover my latest projects here and explore more on
@@ -178,8 +178,8 @@
           >
         </p>
       </div>
-      <div class="row">
-        <div class="project-container">
+      <div>
+        <div class="project-container row">
           <div class="project-card">
             <h3 class="project-title">Blinqpay Langing Page</h3>
             <div class="project-screenshot">
@@ -263,14 +263,13 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                             Service Section                             -->
     <!-- ----------------------------------------------------------------------- -->
-    <section class="services" id="services">
+    <section class="services row" id="services">
       <h2 class="services__title">Services</h2>
       <p>
         Offering top-notch services to create modern, fast, and user-friendly
         web experiences.
       </p>
-
-      <div class="services__list">
+      <div class="row services__list">
         <!-- Web Design & Development -->
         <div class="services__item services__item--card">
           <img
@@ -284,7 +283,6 @@
             JavaScript.
           </p>
         </div>
-
         <!-- Landing Page Design -->
         <div class="services__item">
           <img
@@ -292,14 +290,12 @@
             class="services__item-icon"
             alt="Landing Page Development"
           />
-
           <h3 class="services__item-title">Landing Page Design</h3>
           <p class="services__item-desc">
             Design and develop high-converting landing pages with a mobile-first
             approach.
           </p>
         </div>
-
         <!-- Portfolio Websites -->
         <div class="services__item">
           <img
@@ -307,14 +303,12 @@
             class="services__item-icon"
             alt="Portfolio Development"
           />
-
           <h3 class="services__item-title">Portfolio Websites</h3>
           <p class="services__item-desc">
             Build personal portfolio websites to showcase your skills and
             projects.
           </p>
         </div>
-
         <!-- Design to HTML (Figma, XD, PSD) -->
         <div class="services__item">
           <img
@@ -322,14 +316,12 @@
             class="services__item-icon"
             alt="Figma Conversion"
           />
-
           <h3 class="services__item-title">Design to HTML</h3>
           <p class="services__item-desc">
             Convert Figma, XD, or PSD designs into responsive, pixel-perfect
             websites.
           </p>
         </div>
-
         <!-- Bootstrap Websites -->
         <div class="services__item">
           <img
@@ -344,16 +336,15 @@
         </div>
       </div>
     </section>
-
     <!-- ----------------------------------------------------------------------- -->
     <!--                             Contact Section                             -->
     <!-- ----------------------------------------------------------------------- -->
-    <section id="contact">
-      <div class="row">
+    <section id="contact" class="contact row">
+      <div>
         <h2>Contact</h2>
         <p id="status">Reach out to start your next web project</p>
       </div>
-      <div class="contact-grid">
+      <div class="contact-grid row">
         <div class="geo-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.3807277734486!2d90.3981512752589!3d23.885000683595745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c446e5e34445%3A0x2054a715c058d344!2sSena%20Kalyan%20Commercial%20Complex.!5e1!3m2!1sen!2sbd!4v1738605989791!5m2!1sen!2sbd"
@@ -400,7 +391,6 @@
               autocomplete="on"
             />
           </div>
-
           <button type="submit" class="send-mail">Send Mail</button>
         </form>
       </div>
@@ -408,8 +398,10 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 FOOTER                                  -->
     <!-- ----------------------------------------------------------------------- -->
-    <section class="footer">
-      <h3 style="text-transform: capitalize">Let's Connect <i class="fa-duotone fa-solid fa-rss"></i></h3>
+    <section class="footer row">
+      <h3 style="text-transform: capitalize">
+        Let's Connect <i class="fa-duotone fa-solid fa-rss"></i>
+      </h3>
       <div class="footer-links">
         <div class="footer-link">
           <a
@@ -442,10 +434,10 @@
           </a>
         </div>
       </div>
-
-      <p class="credit">© 2025 AV Shaheen. All rights reserved.</p>
+      <p class="credit">
+        © <span id="year"></span> AV Shaheen. All rights reserved.
+      </p>
     </section>
-
     <!-- Script Files -->
     <script src="./resources/js/app.js" defer></script>
   </body>

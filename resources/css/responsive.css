@@ -1,6 +1,23 @@
 /* resources/css/responsive.css */
-/* 38em = 608px */
+/* ==================================================== */
+/* Mobile-First Responsive Design                       */
+/* Breakpoints: 38em(608px), 48em(768px), 62em(992px),  */
+/* 75em(1200px), 100em(1600px)                          */
+/* ==================================================== */
+/* ---------------------------- */
+/* 38em = 608px (Tablet Portrait) */
+/* ---------------------------- */
 @media (min-width: 38em) {
+
+   /* Global Styles */
+   section {
+      padding: var(--space-md);
+   }
+
+   /* Layout Structure */
+   .row {
+      padding-inline: var(--space-md);
+   }
 
    /* Hero Section */
    .hero {
@@ -9,31 +26,31 @@
       padding: var(--space-xl) var(--space-md);
    }
 
+   .hero-content {
+      align-items: flex-start;
+   }
+
+   .hero-title {
+      line-height: 0.8;
+   }
+
    .hero p {
       text-align: left;
       padding-inline: 0;
       font-weight: bold;
    }
 
-   .hero-content {
-      align-items: flex-start;
-   }
-
-   .hero-title {
-      line-height: .8;
-   }
-
-   /* Projects */
+   /* Projects Grid */
    .project-container {
       grid-template-columns: repeat(2, 1fr);
    }
 
-   /* Services */
+   /* Services Section */
    .services__list {
       grid-template-columns: repeat(2, 1fr);
    }
 
-   /* Contact */
+   /* Contact Section */
    .contact-grid {
       grid-template-columns: 1fr 1fr;
       align-items: center;
@@ -48,16 +65,28 @@
 
    .geo-map {
       border: none;
+      order: -1;
       box-shadow: none;
    }
 }
 
-/* 48em = 768px */
+/* ---------------------------- */
+/* 48em = 768px (Tablet Landscape) */
+/* ---------------------------- */
 @media (min-width: 48em) {
 
-   /* Navigation */
+   /* Global Adjustments */
+   section {
+      padding: var(--space-lg);
+   }
+
+   .row {
+      padding-inline: var(--space-lg);
+   }
+
+   /* Desktop Navigation */
    .navbar {
-      height: 50px;
+      height: 60px;
       display: flex;
       justify-content: space-between;
       padding-inline: var(--space-xs);
@@ -86,7 +115,7 @@
       display: inline-flex;
       flex-direction: row;
       justify-content: space-between;
-      gap: var(--space-xxl);
+      gap: var(--space-md);
       background: initial;
       border: 0;
    }
@@ -109,28 +138,38 @@
       font-size: var(--fs-200);
    }
 
-
    .cv-button {
       display: inline-block;
       border: 0;
       font-size: var(--fs-200);
+      padding: var(--space-sm) var(--space-md);
    }
 
-   /* Hero */
+   /* Hero Section */
    .hero-content {
       order: -1;
+   }
+
+   .hero-title {
+      font-size: var(--fs-500);
+      line-height: 1.1;
    }
 
    .hero-image img {
       max-width: 400px;
    }
 
-   /* Projects */
-   .project-container {
-      grid-template-columns: repeat(3, 1fr);
+   .btn-primary {
+      align-self: flex-start;
+      width: 250px;
    }
 
-   /* Services */
+   /* Projects Grid */
+   .project-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   /* Services Section */
    .services__list {
       grid-template-columns: repeat(3, 1fr);
    }
@@ -139,48 +178,72 @@
       max-width: 25%;
    }
 
-
-   /* Footer */
+   /* Footer Layout */
    .footer {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: var(--space-xxl);
+      gap: var(--space-md);
    }
 }
 
-/* 62em = 992px */
+/* ---------------------------- */
+/* 62em = 992px (Small Desktop) */
+/* ---------------------------- */
 @media (min-width: 62em) {
 
-   /* Typography */
+   /* Global Sizing */
+   section {
+      padding: var(--space-xl);
+   }
+
+   .row {
+      padding-inline: var(--space-xl);
+   }
+
+   /* Typography Scaling */
    h2 {
       font-size: var(--fs-500);
    }
 
-   h2+p {
+   .logo {
+      max-width: 115px;
+   }
+
+   h2+p,
+   .hero p {
       font-size: var(--fs-400);
       max-width: 75ch;
       margin-inline: auto;
    }
 
-   /* Hero */
+   .hero-title {
+      font-size: var(--fs-600);
+   }
+
+   /* Hero Layout */
    .hero {
-      gap: var(--space-xxl);
+      gap: var(--space-lg);
    }
 
-   /* Projects */
-   .project-container {
-      grid-template-columns: repeat(4, 1fr);
+   .btn-primary {
+      font-size: var(--fs-400);
    }
 
-   /* Services */
+   /* Services Grid */
    .services__list {
-      gap: var(--space-xl);
+      gap: var(--space-lg);
    }
 
-   /* Contact */
+   /* Contact Section */
    .contact-secondary {
-      padding: var(--space-xl);
+      padding: var(--space-md);
+      justify-content: center;
+      gap: var(--space-lg);
+   }
+
+   .contact-secondary h3 {
+      font-size: var(--fs-450);
    }
 
    .geo-map {
@@ -191,55 +254,83 @@
    .geo-map iframe {
       border-radius: 8px;
    }
+
+   .footer {
+      justify-content: space-around;
+   }
+
+   .footer h3 {
+      font-size: var(--fs-450);
+   }
+
+   .credit {
+      font-size: var(--fs-300);
+   }
 }
 
-/* 75em = 1200px */
+/* ----------------------------- */
+/* 75em = 1200px (Large Desktop) */
+/* ----------------------------- */
 @media (min-width: 75em) {
+   .navbar-content {
+      gap: var(--space-xxl);
+   }
 
-   /* Layout */
+   .nav-links {
+      gap: var(--space-xxl);
+      margin-right: var(--space-xxl);
+   }
+
+   .nav-links li a,
+   .cv-button {
+      font-size: var(--fs-300);
+   }
+
+   /* Spacing Enhancements */
+   section {
+      padding: var(--space-xxl);
+   }
+
    .row {
       padding-inline: var(--space-xxl);
    }
 
-   /* Hero */
+   /* Hero Image */
    .hero-image img {
       max-width: 500px;
    }
 
-   /* Projects */
+   /* Project Cards */
+   .project-container {
+      justify-content: center;
+   }
+
    .project-card {
       padding: var(--space-md);
    }
 
-   /* Services */
+   /* Service Items */
    .services__item {
       padding: var(--space-lg);
    }
-
-   /* Contact */
-   .geo-map {
-      height: 600px;
-   }
 }
 
-/* Mobile Optimizations */
+/* ---------------------------- */
+/* Mobile-Specific Adjustments  */
+/* (Below 48em/768px)          */
+/* ---------------------------- */
 @media (max-width: 48em) {
-   .geo-map {
-      order: -1;
-   }
-
    .services__item-icon {
       max-width: 20%;
    }
 }
 
-/* 2K+ Screens */
+/* ---------------------------- */
+/* 2K+ Screen Optimization      */
+/* 100em = 1600px              */
+/* ---------------------------- */
 @media (min-width: 100em) {
    html {
-      font-size: 110%;
-   }
-
-   .row {
-      max-width: 1800px;
+      font-size: 115%;
    }
 }

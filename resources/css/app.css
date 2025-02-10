@@ -149,6 +149,30 @@ h2 {
   font-size: var(--fs-450);
   text-transform: uppercase;
   margin-bottom: var(--space-md);
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  top: 109%;
+  width: 250px;
+  /* Increased from 200px */
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, transparent, #28c7d6, transparent);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  top: 107%;
+  width: 70px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #ffffffad, #28c7d6);
 }
 
 h2+p {
@@ -204,9 +228,7 @@ h2+p {
       var(--clr-blueish) 0%,
       var(--clr-blueish) 1%,
       var(--clr-accent) 100%);
-
 }
-
 
 .show {
   display: flex;
@@ -350,7 +372,7 @@ h2+p {
   font-weight: var(--fw-700);
   color: var(--clr-neutral);
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8x);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -399,7 +421,7 @@ h2+p {
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-md);
   justify-content: start;
   gap: var(--space-lg);
@@ -411,6 +433,7 @@ h2+p {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   padding: var(--space-xs);
+  transition: .3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -464,7 +487,6 @@ h2+p {
   gap: 20px;
   justify-content: start;
   gap: var(--space-lg);
-
 }
 
 .services__item {
@@ -478,7 +500,8 @@ h2+p {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  transition: .3s ease-in-out;
+  cursor: context-menu;
 }
 
 .services__item:hover {
@@ -503,15 +526,13 @@ h2+p {
   line-height: 1.2;
 }
 
-
-
 /* -------------------------------------------------------------------------- */
 /*                               Contact Section                              */
 /* -------------------------------------------------------------------------- */
-#contact {
-  background: radial-gradient(circle at center,
-      var(--clr-blueish),
-      var(--clr-accent));
+.contact {
+  background: linear-gradient(to left,
+      var(--clr-accent),
+      var(--clr-blueish));
 }
 
 .contact-grid {
@@ -572,7 +593,6 @@ input {
   color: var(--clr-neutral);
 }
 
-
 .send-mail {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -601,6 +621,7 @@ input {
 
 .footer h3 {
   font-size: var(--fs-400);
+  position: relative;
 }
 
 .footer-links {
@@ -609,8 +630,6 @@ input {
   align-items: center;
   gap: var(--space-sm);
 }
-
-
 
 .footer-link a {
   background: rgba(106, 103, 167, 0.128);
