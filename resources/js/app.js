@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   /* -------------------------------------------------------------------------- */
   const navbar = document.querySelector(".navbar");
   const navbarHeight = navbar.offsetHeight;
-
   window.addEventListener("scroll", function () {
     if (window.scrollY > navbarHeight) {
       navbar.classList.add("scrolled");
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.remove("scrolled");
     }
   });
-
   /* -------------------------------------------------------------------------- */
   /*                             Navbar Link Active Status                      */
   /* -------------------------------------------------------------------------- */
@@ -64,64 +62,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   /* -------------------------------------------------------------------------- */
-  /*                            Hero Title Animation                            */
-  /* -------------------------------------------------------------------------- */
-  // function([string1, string2],target id,[color1,color2])
-  consoleText(["Web Designer", "Frontend Developer"], "hero-terminal-text", [
-    "white",
-  ]);
-  function consoleText(words, id, colors) {
-    if (colors === undefined) colors = ["#fff"];
-    var visible = true;
-    var con = document.getElementById("console");
-    var letterCount = 1;
-    var x = 1;
-    var waiting = false;
-    var target = document.getElementById(id);
-    target.setAttribute("style", "color:" + colors[0]);
-    // Add the text typing effect only to the span with the dynamic text
-    window.setInterval(function () {
-      if (letterCount === 0 && waiting === false) {
-        waiting = true;
-        target.innerHTML = words[0].substring(0, letterCount);
-        window.setTimeout(function () {
-          var usedColor = colors.shift();
-          colors.push(usedColor);
-          var usedWord = words.shift();
-          words.push(usedWord);
-          x = 1;
-          target.setAttribute("style", "color:" + colors[0]);
-          letterCount += x;
-          waiting = false;
-        }, 1000);
-      } else if (letterCount === words[0].length + 1 && waiting === false) {
-        waiting = true;
-        window.setTimeout(function () {
-          x = -1;
-          letterCount += x;
-          waiting = false;
-        }, 1000);
-      } else if (waiting === false) {
-        target.innerHTML = words[0].substring(0, letterCount);
-        letterCount += x;
-      }
-    }, 170);
-    // Handle blinking underscore animation separately for the console effect
-    window.setInterval(function () {
-      if (visible === true) {
-        con.className = "console-underscore hidden";
-        visible = false;
-      } else {
-        con.className = "console-underscore";
-        visible = true;
-      }
-    }, 500);
-  }
-  /* -------------------------------------------------------------------------- */
   /*                             EmailJS Integration                            */
   /* -------------------------------------------------------------------------- */
   (function () {
-    emailjs.init("dShqwFPB0DRVmOlF3"); // Your Public Key
+    emailjs.init("dShqwFPB0DRVmOlF3"); // Public Key
   })();
   const contactForm = document.getElementById("contactForm");
   const statusMessage = document.getElementById("status");

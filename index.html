@@ -65,6 +65,8 @@
     ></script>
     <!-- Email JS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- AoS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./resources/css/reset.css" />
     <link rel="stylesheet" href="./resources/css/app.css" />
@@ -86,7 +88,7 @@
         <div class="navbar-header">
           <div class="nav-left">
             <div class="logo" title="Back To Home">
-              <a href="#"
+              <a href="/"
                 ><img
                   src="./resources/images/shaheen-logo.gif"
                   alt="Portfolio Logo"
@@ -101,9 +103,7 @@
         <div class="navbar-content">
           <ul class="nav-links">
             <li>
-              <a
-                href="#hero"
-                class="nav-link text-neutral fw-700 active-nav-link"
+              <a href="/" class="nav-link text-neutral fw-700 active-nav-link"
                 >Home</a
               >
             </li>
@@ -149,7 +149,7 @@
     <!--                              Hero Section                               -->
     <!-- ----------------------------------------------------------------------- -->
     <section id="hero" class="hero row">
-      <div class="hero-image row">
+      <div class="hero-image row" data-aos="fade-left">
         <img src="./resources/images/person-shaheen.png" alt="AV Shaheen" />
         <div class="social-links-list">
           <a
@@ -174,17 +174,20 @@
         </div>
       </div>
       <div class="hero-content row">
-        <h1 class="hero-title">
-          I'm a <span id="hero-terminal-text"></span>
-          <d iv class="console-underscore" id="console">&#95;</d>
+        <h1 class="hero-title" data-aos="fade-right">
+          I'm a
+          <span class="text-neutral">Web Designer</span>
+          &
+          <span class="text-neutral">Frontend Developer</span>
         </h1>
-        <p>
+        <p data-aos="fade-right">
           I design and develop websites that are fast, modern, and ready to make
           an impact
         </p>
         <button
           onclick="window.location.href='#contact'"
           class="button btn-primary"
+          data-aos="fade-up"
         >
           Contact Me
         </button>
@@ -195,17 +198,17 @@
     <!-- ----------------------------------------------------------------------- -->
     <section id="works" class="works row">
       <div>
-        <h2>Projects</h2>
-        <p>
+        <h2 data-aos="fade-right">Projects</h2>
+        <p data-aos="fade-left">
           Discover my latest projects here and explore more on
-          <a href="https://github.com/avroshaheen/" class="text-redish fw-700"
+          <a href="https://github.com/avroshaheen/" class="text-white fw-700"
             ><i class="fa-brands fa-github"> </i> Github</a
           >
         </p>
       </div>
       <div>
         <div class="project-container row">
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-left">
             <h3 class="project-title">Blinqpay Langing Page</h3>
             <div class="project-screenshot">
               <img
@@ -225,7 +228,7 @@
               >
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="flip-right">
             <h3 class="project-title">CSS Grid Challenge</h3>
             <div class="project-screenshot">
               <img
@@ -245,7 +248,7 @@
               >
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="flip-left">
             <h3 class="project-title">QR Code Component</h3>
             <div class="project-screenshot">
               <img src="./resources/images/project-qr-code.png" alt="QRCode" />
@@ -262,7 +265,7 @@
               >
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="flip-right">
             <h3 class="project-title">PingPong Score Keeper</h3>
             <div class="project-screenshot">
               <img
@@ -289,14 +292,14 @@
     <!--                             Service Section                             -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="services row" id="services">
-      <h2 class="services__title">Services</h2>
-      <p>
+      <h2 class="services__title" data-aos="fade-left">Services</h2>
+      <p data-aos="fade-right">
         Offering top-notch services to create modern, fast, and user-friendly
         web experiences.
       </p>
       <div class="row services__list">
         <!-- Web Design & Development -->
-        <div class="services__item services__item--card">
+        <div class="services__item services__item" data-aos="flip-left">
           <img
             src="./resources/images/web-development.png"
             class="services__item-icon"
@@ -309,7 +312,7 @@
           </p>
         </div>
         <!-- Landing Page Design -->
-        <div class="services__item">
+        <div class="services__item" data-aos="flip-right">
           <img
             src="./resources/images/landing-page.png"
             class="services__item-icon"
@@ -322,7 +325,7 @@
           </p>
         </div>
         <!-- Portfolio Websites -->
-        <div class="services__item">
+        <div class="services__item" data-aos="flip-left">
           <img
             src="./resources/images/portfolio.png"
             class="services__item-icon"
@@ -335,7 +338,7 @@
           </p>
         </div>
         <!-- Design to HTML (Figma, XD, PSD) -->
-        <div class="services__item">
+        <div class="services__item" data-aos="flip-right">
           <img
             src="./resources/images/figma.png"
             class="services__item-icon"
@@ -348,7 +351,7 @@
           </p>
         </div>
         <!-- Bootstrap Websites -->
-        <div class="services__item">
+        <div class="services__item" data-aos="flip-left">
           <img
             src="./resources/images/bootstrap.png"
             class="services__item-icon"
@@ -366,11 +369,13 @@
     <!-- ----------------------------------------------------------------------- -->
     <section id="contact" class="contact row">
       <div>
-        <h2>Contact</h2>
-        <p id="status">Reach out to start your next web project</p>
+        <h2 data-aos="fade-right">Contact</h2>
+        <p id="status" data-aos="fade-left">
+          Reach out to start your next web project
+        </p>
       </div>
       <div class="contact-grid row">
-        <div class="geo-map">
+        <div class="geo-map" data-aos="zoom-in">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.3807277734486!2d90.3981512752589!3d23.885000683595745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c446e5e34445%3A0x2054a715c058d344!2sSena%20Kalyan%20Commercial%20Complex.!5e1!3m2!1sen!2sbd!4v1738605989791!5m2!1sen!2sbd"
             width="600"
@@ -381,7 +386,7 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <form id="contactForm" class="contact-secondary">
+        <form id="contactForm" class="contact-secondary" data-aos="zoom-out">
           <h3>Let's Discuss About Projects</h3>
           <div class="contact-name">
             <label for="name">Name</label>
@@ -425,10 +430,14 @@
     <!--                                 FOOTER                                  -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="footer row">
-      <h3 style="text-transform: capitalize">
+      <h3
+        style="text-transform: capitalize"
+        data-aos="fade-down"
+        data-aos-offset="20"
+      >
         Let's Connect <i class="fa-duotone fa-solid fa-rss"></i>
       </h3>
-      <div class="footer-links">
+      <div class="footer-links" data-aos="zoom-in" data-aos-offset="20">
         <div class="footer-link">
           <a
             target="_blank"
@@ -460,13 +469,17 @@
           </a>
         </div>
       </div>
-      <p class="credit">
+      <p class="credit" data-aos="zoom-in" data-aos-offset="20">
         © <span id="year"></span> AV Shaheen. All rights reserved.
       </p>
     </section>
     <!-- ----------------------------------------------------------------------- -->
     <!--                              Script Files                               -->
     <!-- ----------------------------------------------------------------------- -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./resources/js/app.js" defer></script>
   </body>
 </html>
