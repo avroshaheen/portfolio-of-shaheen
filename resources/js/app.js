@@ -69,13 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
   })();
   const contactForm = document.getElementById("contactForm");
   const statusMessage = document.getElementById("status");
+
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
       emailjs
         .sendForm("getjob_avro", "template_tmavbum", this)
         .then(() => {
-          statusMessage.innerText = "✅ Message sent successfully!";
+          statusMessage.style.display = "block";
+          statusMessage.innerText = "📨 I got you! I'll get back to you soon.";
           statusMessage.style.color = "white";
           contactForm.reset(); // Clear form fields after success
         })

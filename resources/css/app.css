@@ -8,7 +8,7 @@
   --clr-greyish: #6c757d;
   --clr-blueish: #1d3557;
   --clr-accent: #2a6f97;
-  --clr-redish: #D61A3C;
+  --clr-redish: #d61a3c;
   --clr-pinkish: #ffffffa0;
   /* Font Weights */
   --fw-400: 400;
@@ -17,7 +17,7 @@
   --fw-700: 700;
   --fw-800: 800;
   /* Font Sizes */
-  --fs-200: .9rem;
+  --fs-200: 0.9rem;
   --fs-300: 1rem;
   --fs-400: 1.2rem;
   --fs-450: 1.4rem;
@@ -170,7 +170,7 @@ h2::after {
   background: linear-gradient(to right, #ffffffad, #28c7d6);
 }
 
-h2+p {
+h2 + p {
   font-size: var(--fs-300);
   color: var(--clr-neutral);
   text-align: center;
@@ -213,10 +213,12 @@ section {
 /* --------------------------------- Navbar --------------------------------- */
 .navbar {
   height: 40px;
-  background: linear-gradient(to right,
-      var(--clr-blueish) 0%,
-      var(--clr-blueish) 1%,
-      var(--clr-accent) 100%);
+  background: linear-gradient(
+    to right,
+    var(--clr-blueish) 0%,
+    var(--clr-blueish) 1%,
+    var(--clr-accent) 100%
+  );
   transition: background-color 0.3s ease;
 }
 
@@ -345,9 +347,11 @@ section {
   gap: var(--space-md);
   justify-content: center;
   gap: var(--space-lg);
-  background: radial-gradient(circle at center,
-      var(--clr-blueish),
-      var(--clr-accent));
+  background: radial-gradient(
+    circle at center,
+    var(--clr-blueish),
+    var(--clr-accent)
+  );
 }
 
 .hero-image {
@@ -430,9 +434,11 @@ section {
 /*                                Works/Projects Section                      */
 /* -------------------------------------------------------------------------- */
 .works {
-  background: radial-gradient(circle at center,
-      var(--clr-accent),
-      var(--clr-blueish));
+  background: radial-gradient(
+    circle at center,
+    var(--clr-accent),
+    var(--clr-blueish)
+  );
 }
 
 .project-container {
@@ -449,7 +455,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   padding: var(--space-xs);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -489,9 +495,11 @@ section {
 /*                               Service Section                              */
 /* -------------------------------------------------------------------------- */
 .services {
-  background: radial-gradient(circle at center,
-      var(--clr-blueish),
-      var(--clr-accent));
+  background: radial-gradient(
+    circle at center,
+    var(--clr-blueish),
+    var(--clr-accent)
+  );
 }
 
 .services__list {
@@ -513,7 +521,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .services__item:hover {
@@ -542,9 +550,7 @@ section {
 /*                               Contact Section                              */
 /* -------------------------------------------------------------------------- */
 .contact {
-  background: linear-gradient(to left,
-      var(--clr-accent),
-      var(--clr-blueish));
+  background: linear-gradient(to left, var(--clr-accent), var(--clr-blueish));
 }
 
 .contact-grid {
@@ -615,15 +621,32 @@ input {
 .send-mail:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+#status {
+  font-size: var(--fs-300);
+  color: var(--clr-neutral);
+  padding: 0.5em 1em;
+  width: 50%;
+  display: none;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
 
 /* -------------------------------------------------------------------------- */
 /*                               Footer Section                               */
 /* -------------------------------------------------------------------------- */
 .footer {
-  background: linear-gradient(to left,
-      var(--clr-blueish) 10%,
-      var(--clr-accent) 0%,
-      var(--clr-blueish) 10%);
+  background: linear-gradient(
+    to left,
+    var(--clr-blueish) 10%,
+    var(--clr-accent) 0%,
+    var(--clr-blueish) 10%
+  );
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
@@ -659,7 +682,7 @@ input {
 }
 
 .credit {
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1;
   color: #ffffffb7;
   text-align: center;
